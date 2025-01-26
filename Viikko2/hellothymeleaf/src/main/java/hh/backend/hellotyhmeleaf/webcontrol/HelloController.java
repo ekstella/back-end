@@ -1,4 +1,4 @@
-package hh.backend.hellotyhmeleaf.controller;
+package hh.backend.hellotyhmeleaf.webcontrol;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 public class HelloController {
 
     @RequestMapping("/hello")
-    public String greeting(@RequestParam(value="name")String name, Model model ) {
+    public String sayGreetings(@RequestParam String name, Model model ) {
         model.addAttribute("name", name);
         return "hello";
     }

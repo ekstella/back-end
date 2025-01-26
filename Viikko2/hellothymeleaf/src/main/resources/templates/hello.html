@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello thymeleaf</title>
+    <title>Hello Thymeleaf</title>
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <td th:text="'Hello, ' + ${name} + '!'" />
+        </tr>
+    </table>
 </body>
 </html>
+<!--<p th:text="'Hello, ' + ${name} + '!'" />--> 

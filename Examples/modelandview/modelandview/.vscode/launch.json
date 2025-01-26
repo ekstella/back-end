@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ModelandviewApplication<modelandview>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "hh.sof03.modelandview.ModelandviewApplication",
+            "projectName": "modelandview",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
