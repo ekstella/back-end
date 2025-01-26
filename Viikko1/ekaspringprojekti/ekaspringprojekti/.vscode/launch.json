@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EkaspringprojektiApplication<ekaspringprojekti>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "hh.sof03.ekaspringprojekti.EkaspringprojektiApplication",
+            "projectName": "ekaspringprojekti",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
