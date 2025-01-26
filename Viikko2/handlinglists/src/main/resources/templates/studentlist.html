@@ -9,7 +9,7 @@
     <h1>Welcome to Haaga-Helia!</h1>
     <table>
         <tr th:each="student : ${students}">
-            <td th:text="${student.Model}"></td>
+            <td th:text="${student.firstName} + ' ' + ${student.lastName}"></td>
         </tr>
     </table>
 </body>

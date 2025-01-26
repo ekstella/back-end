@@ -15,9 +15,9 @@ public class StudentController {
     @GetMapping("/hello")
     public String getStudents(Model model) {
         List<Student> students = new ArrayList<Student>();
-        students.add(new Student("Kate", "Cole"));
-        students.add(new Student("Dan", "Brown"));
-        students.add(new Student("Mike", "Mars"));
+        students.add(new Student("Cole", "Kate"));
+        students.add(new Student("Brown", "Dan"));
+        students.add(new Student("Mars", "Mike"));
         model.addAttribute("students", students);
         return "studentlist";
     }
