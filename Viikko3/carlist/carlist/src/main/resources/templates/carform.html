@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1>New Car</h1>
+    <form action="" method="post" th:object="${}">
+        <p>Model: <input type="text" name="" id=""></p>
+        <p>Year: <input type="text" name="" id=""></p>
+        <p><input type="submit" value="Add"></p>
+    </form>
 </body>
 </html>
