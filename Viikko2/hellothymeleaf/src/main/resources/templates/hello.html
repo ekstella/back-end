@@ -6,11 +6,8 @@
     <title>Hello Thymeleaf</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td th:text="'Hello, ' + ${name} + '!'" />
-        </tr>
-    </table>
+    <div th:if="${age} &gt; 17" th:text="'Welcome ' + ${name} + '!'"/>
+    <div th:if="${age} &lt; 18" th:text="'You are too young!'"/>
 </body>
 </html>
 <!--<p th:text="'Hello, ' + ${name} + '!'" />--> 
