@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -31,6 +32,14 @@ public class CarController {
 		public String getNewCarForm(Model model){
 			model.addAttribute("car", new Car()); // tyhjä auto-olio thymeleaf-templatelle näkyviin
 			return "carform";  // carform.html
+		}
+
+		// vastaanottaa uuden auton lomaketiedon
+		// pyynnön bodyssa on tullut auton tiedot parametriketjuna model=Lada&year=1970
+		@PostMapping("/savecar")
+		public String saveNewCar(@ModelAttribute Car car, Model model){
+			model.addAttribute("car", car);
+			return "result"; // result.html
 		}
 
 }
