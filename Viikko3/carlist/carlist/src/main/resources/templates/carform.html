@@ -7,9 +7,9 @@
 </head>
 <body>
     <h1>New Car</h1>
-    <form action="" method="post" th:object="${}">
-        <p>Model: <input type="text" name="" id=""></p>
-        <p>Year: <input type="text" name="" id=""></p>
+    <form action="" method="post" th:object="${car}">
+        <p>Model: <input type="text" th:field="*{model}"></p>
+        <p>Year: <input type="text" th:field="*{year}"></p>
         <p><input type="submit" value="Add"></p>
     </form>
 </body>

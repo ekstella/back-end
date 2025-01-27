@@ -29,7 +29,7 @@ public class CarController {
 		// palauttaa uuden auton lomakkeen
 		@GetMapping("/newcar") 
 		public String getNewCarForm(Model model){
-			model.addAttribute(new Car()); // tyhjä auto-olio thymeleaf-templatelle näkyviin
+			model.addAttribute("car", new Car()); // tyhjä auto-olio thymeleaf-templatelle näkyviin
 			return "carform";  // carform.html
 		}
 
