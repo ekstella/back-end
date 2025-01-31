@@ -1,4 +1,4 @@
-package hh.backend.hellotyhmeleaf.webcontrol;
+package hh.backend.hellothymeleaf.web;
 
 import org.springframework.stereotype.Controller;
 // import org.springframework.web.bind.annotation.GetMapping;
