@@ -1,5 +1,6 @@
 package hh.sof3.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,6 +13,7 @@ public class Car {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String model;
+	@Column(name = "pYear")
 	private int year;
 	
 	//konstruktorit
