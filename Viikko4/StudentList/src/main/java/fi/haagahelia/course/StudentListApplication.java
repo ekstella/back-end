@@ -23,11 +23,11 @@ public class StudentListApplication {
 	public CommandLineRunner studentDemo(StudentRepository studentRepository) {
 		return (args) -> {
 			log.info("save a couple of students");
-			studentRepository.save(new Student("John", "Johnson", "john@john.com"));
-			studentRepository.save(new Student("Katy", "Kateson", "kate@kate.com"));	
+			studentRepository.save(new Student("John", "Johnson", "john@john.com")); // SQL INSERT
+			studentRepository.save(new Student("Katy", "Kateson", "kate@kate.com")); // SQL INSERT
 			
 			log.info("fetch all students");
-			for (Student student : studentRepository.findAll()) {
+			for (Student student : studentRepository.findAll()) { // findAll -> SQL SELECT 
 				log.info(student.toString());
 			}
 
