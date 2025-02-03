@@ -23,7 +23,7 @@ public class CarController {
 	@RequestMapping(value = "/allcars", method = RequestMethod.GET)
 	public String getCars(Model model) {
 		// List<Car> cars = (List<Car>) carReposirory.findAll();
-		model.addAttribute("cars", carRepository.findAll()); // välitetään autolista templatelle model-olion avulla
+		model.addAttribute("cars", carRepository.findAll()); // SQL SELECT  välitetään autolista templatelle model-olion avulla
 		return "car-list"; // DispatherServlet saa tämän template-nimen ja kutsuu seuraavaksi
 							// carlist.html-templatea,
 							// joka prosessoidaan palvelimella
@@ -38,10 +38,9 @@ public class CarController {
 
 	// autolomakeella syötettyjen tietojen vastaanotto ja tallennus
 	@RequestMapping(value = "/savecar", method = RequestMethod.POST)
-	public String saveCar(@ModelAttribute Car car, Model model) {
-		// ei osata vielä tallentaa tietokantaan lomakkeelta syötetyn auton tietoja
-		model.addAttribute("car", car);
-		return "carresult";
+	public String saveCar(@ModelAttribute Car car) {
+		carRepository.save(car); // SQL INSERT
+		return "redirect:/allcars";
 	}
 
 }
