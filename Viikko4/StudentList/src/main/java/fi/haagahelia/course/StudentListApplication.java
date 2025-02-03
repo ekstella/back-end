@@ -20,14 +20,14 @@ public class StudentListApplication {
 	}
 	
 	@Bean
-	public CommandLineRunner studentDemo(StudentRepository repository) {
+	public CommandLineRunner studentDemo(StudentRepository studentRepository) {
 		return (args) -> {
 			log.info("save a couple of students");
-			repository.save(new Student("John", "Johnson", "john@john.com"));
-			repository.save(new Student("Katy", "Kateson", "kate@kate.com"));	
+			studentRepository.save(new Student("John", "Johnson", "john@john.com"));
+			studentRepository.save(new Student("Katy", "Kateson", "kate@kate.com"));	
 			
 			log.info("fetch all students");
-			for (Student student : repository.findAll()) {
+			for (Student student : studentRepository.findAll()) {
 				log.info(student.toString());
 			}
 
