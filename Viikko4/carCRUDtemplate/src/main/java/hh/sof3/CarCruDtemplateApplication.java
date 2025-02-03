@@ -10,4 +10,5 @@ public class CarCruDtemplateApplication {
 		SpringApplication.run(CarCruDtemplateApplication.class, args);
 	}
 
+	// TODO: CommandLineRunnerilla testidataa, testiautoja tietokantaan, kts. demoprojekti
 }
