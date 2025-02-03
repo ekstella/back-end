@@ -1,7 +1,16 @@
 package hh.sof3.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Car {
 	// attribuutit
+	@Id // primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String model;
 	private int year;
 	
@@ -30,12 +39,16 @@ public class Car {
 	public int getYear() {
 		return year;
 	}
-	// toString
 	@Override
 	public String toString() {
-		return "Car [model=" + model + ", year=" + year + "]";
+		return "Car [id=" + id + ", model=" + model + ", year=" + year + "]";
 	}
 	
-	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 }
